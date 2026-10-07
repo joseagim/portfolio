@@ -147,3 +147,12 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Vercel
+.vercel
+
+# Previews temporales de diseño
+.preview
+
+# Configuración local de herramientas
+.claude/

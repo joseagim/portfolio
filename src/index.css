@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --accent: 10 127 89; /* verde menta oscuro (legible sobre blanco) */
+    --accent-2: 47 91 224;
+    --on-accent: 255 255 255;
+  }
+  .dark {
+    --accent: 52 211 153; /* menta */
+    --accent-2: 107 150 255;
+    --on-accent: 6 16 31;
+  }
+
+  html {
+    @apply bg-white text-ink antialiased;
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+  }
+
+  html.dark {
+    @apply bg-navy-950 text-mist;
+  }
+
+  body {
+    @apply min-h-screen bg-white font-sans text-ink transition-colors duration-200 dark:bg-navy-950 dark:text-mist;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  ::selection {
+    @apply bg-accent/30;
+  }
+
+  :focus-visible {
+    @apply rounded-[4px] outline-none ring-2 ring-accent-2 ring-offset-2 ring-offset-white dark:ring-offset-navy-950;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8;
+  }
+
+  .section {
+    @apply scroll-mt-16 py-20 sm:py-28;
+  }
+
+  /* Botones */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-colors duration-150 disabled:pointer-events-none disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-accent text-on-accent hover:bg-accent/90;
+  }
+  .btn-secondary {
+    @apply btn border border-navy-200 bg-white text-ink hover:border-navy-300 hover:bg-navy-50 dark:border-navy-700 dark:bg-navy-900 dark:text-mist dark:hover:border-navy-600 dark:hover:bg-navy-850;
+  }
+  .btn-ghost {
+    @apply btn text-navy-600 hover:bg-navy-50 hover:text-ink dark:text-navy-300 dark:hover:bg-navy-850 dark:hover:text-white;
+  }
+  .icon-btn {
+    @apply inline-flex h-9 w-9 items-center justify-center rounded-lg text-navy-600 transition-colors duration-150 hover:bg-navy-50 hover:text-ink dark:text-navy-300 dark:hover:bg-navy-850 dark:hover:text-white;
+  }
+
+  /* Tarjetas y superficies */
+  .card {
+    @apply rounded-2xl border border-navy-100 bg-white shadow-soft dark:border-navy-800 dark:bg-navy-900 dark:shadow-none;
+  }
+
+  /* Etiqueta pequeña en monoespaciada */
+  .eyebrow {
+    @apply font-mono text-xs font-medium uppercase tracking-[0.14em] text-navy-500 dark:text-navy-300;
+  }
+
+  /* Enlace de texto */
+  .link {
+    @apply font-medium text-accent-2 underline decoration-accent-2/40 underline-offset-4 transition-colors hover:decoration-accent-2;
+  }
+
+  /* Rejilla decorativa estática (sin animación) */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgb(35 59 93 / 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(35 59 93 / 0.06) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+  .dark .bg-grid {
+    background-image:
+      linear-gradient(to right, rgb(161 179 206 / 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(161 179 206 / 0.06) 1px, transparent 1px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
