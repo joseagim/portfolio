@@ -39,7 +39,7 @@ export default function Hero() {
               <span className="h-3 w-3 rounded-full bg-navy-200 transition-colors duration-200 hover:!bg-[#FEBC2E] dark:bg-navy-700" />
               <span className="h-3 w-3 rounded-full bg-navy-200 transition-colors duration-200 hover:!bg-[#28C840] dark:bg-navy-700" />
             </span>
-            <span className="ml-3 font-mono text-xs text-navy-400">jose@portfolio: ~</span>
+            <span className="ml-3 font-mono text-xs text-navy-400">joseagim@portfolio: ~</span>
           </div>
 
           <div className="p-6 sm:p-9">
@@ -110,7 +110,7 @@ export default function Hero() {
               width="352"
               height="352"
               fetchPriority="high"
-              className="relative h-44 w-44 rounded-full object-cover object-[50%_18%] shadow-lift ring-4 ring-white sm:h-60 sm:w-60 lg:h-72 lg:w-72 xl:h-80 xl:w-80 dark:ring-navy-850"
+              className="relative h-44 w-44 rounded-full object-cover shadow-lift ring-4 ring-white sm:h-60 sm:w-60 lg:h-72 lg:w-72 xl:h-80 xl:w-80 dark:ring-navy-850"
             />
           </div>
         </div>

@@ -63,6 +63,7 @@ const en = {
     title: 'Education and path',
     subtitle: 'My academic background and the next step I am looking for: a software development internship.',
     learned: 'What I learned',
+    tools: 'Tools',
     relatedProjects: 'Projects from the degree',
   },
   projects: {

@@ -1,49 +1,52 @@
 # Portfolio · José Antonio Gimeno San Martín
 
-Web personal para presentar mi perfil y mis proyectos.
+Personal website to showcase my profile and projects.
+
+🌐 **Live at [joseagim.dev](https://joseagim.dev)**
 
 **Stack:** React · Vite · Tailwind CSS · React Router · lucide-react
 
-## Qué incluye
+## What it includes
 
-### Secciones
-- **Portada:** presentación con ventana de terminal, foto, disponibilidad, descarga de CV y enlaces a GitHub, LinkedIn y email.
-- **Sobre mí:** texto de presentación, datos rápidos (formación, ubicación, idiomas, disponibilidad), cualidades y tecnologías por categorías.
-- **Experiencia:** línea de tiempo vertical con la formación (2023 – 2027) y las prácticas que busco.
-- **Proyectos:** tarjetas con portada, tecnologías y etiquetas de estado (en curso, desplegado, premio).
-- **Contacto:** email con botón de copiar, LinkedIn, GitHub, ubicación y formulario de mensaje.
+### Sections
+- **Home:** introduction in a terminal-style window, photo, availability, CV download and links to GitHub, LinkedIn and email.
+- **About me:** short bio, quick facts (education, location, languages, availability), soft skills and technologies grouped by category.
+- **Experience:** vertical timeline with my education (2021 – 2027), a game development course and the internship I'm looking for.
+- **Projects:** cards with a cover image, technologies and status badges (in progress, deployed, award).
+- **Contact:** email with a copy button, LinkedIn, GitHub, location and a message form.
 
-### Páginas de proyecto
-TFG (plataforma de ajedrez), TrainTracker, SmartCook y Band Souls, cada uno con:
-- Galería en carrusel con visor ampliado.
-- Resumen, aportación personal, aspectos destacados y ficha lateral.
-- Enlaces a repositorio y demo cuando existen.
-- Contenido específico: fases, funcionalidades, diagramas de arquitectura, metodología Scrum, historia o reconocimiento.
-- Navegación al proyecto anterior y siguiente.
+### Project pages
+TFG (chess platform), TrainTracker, SmartCook and Band Souls, each with:
+- Screenshot carousel with a full-size viewer.
+- Overview, personal contribution, highlights and a details sidebar.
+- Links to the repository and live demo when available.
+- Project-specific content: phases, features, architecture diagrams, Scrum methodology, story or recognition.
+- Previous / next project navigation.
 
-### Funcionalidades
-- **Bilingüe (ES / EN):** detecta el idioma del navegador y recuerda la elección. Incluye textos, proyectos y meta tags.
-- **Modo oscuro y claro:** oscuro por defecto, con toggle y sin parpadeo al cargar.
-- **CV descargable** en español e inglés desde un menú.
-- **Formulario de contacto** con validación propia y envío mediante Formspree.
-- **SEO básico:** título y descripción dinámicos, Open Graph, favicon y atributo `lang` actualizado.
-- **Accesible y responsive:** HTML semántico, navegación por teclado, imágenes con texto alternativo y diseño mobile-first.
+### Features
+- **Bilingual (ES / EN):** detects the browser language and remembers the choice. Covers UI text, projects and meta tags.
+- **Dark and light mode:** dark by default, with a toggle and no flash on load.
+- **Downloadable CV** in Spanish and English from a menu.
+- **Contact form** with custom validation, sent through Formspree.
+- **Basic SEO:** dynamic title and description, Open Graph, favicon and an up-to-date `lang` attribute.
+- **TrainTracker API warm-up:** when the portfolio opens, its API is woken up in the background so the demo is ready by the time someone reaches it.
+- **Accessible and responsive:** semantic HTML, keyboard navigation, images with alt text and a mobile-first layout.
 
-## Ejecutar en local
+## Run locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Estructura
+## Structure
 
 ```
 src/
-  components/   layout, secciones, proyectos y elementos de interfaz
-  data/         contenido: perfil, proyectos y experiencia
-  i18n/         textos en español e inglés
-  hooks/        tema, meta tags y portapapeles
-  pages/        inicio, detalle de proyecto y 404
-public/         foto, CV e imágenes de cada proyecto
+  components/   layout, sections, projects and UI elements
+  data/         content: profile, projects and experience
+  i18n/         Spanish and English texts
+  hooks/        theme, meta tags, clipboard and API warm-up
+  pages/        home, project detail and 404
+public/         photo, CVs and each project's images
 ```

@@ -1,12 +1,40 @@
 /*
  * Línea de tiempo de la sección "Experiencia" (de arriba abajo, en el orden del array).
  *   type: 'year'       → marcador de año sobre la línea (año + pie opcional)
- *   type: 'education'  → tarjeta de estudios
+ *   type: 'education'  → tarjeta de estudios universitarios
+ *   type: 'school'     → tarjeta de estudios previos (p. ej. bachillerato)
+ *   type: 'course'     → tarjeta de curso o formación complementaria (admite badge y tools)
  *   type: 'internship' → tarjeta de prácticas (borde discontinuo: "lo que busco")
  * Los textos traducibles van como { es, en }. Para añadir una entrada nueva basta con
  * insertar un objeto en el lugar que le corresponda en la línea.
  */
 export const timeline = [
+  {
+    type: 'year',
+    year: '2021',
+    caption: { es: 'Inicio del bachillerato', en: 'Start of the baccalaureate' },
+  },
+  {
+    type: 'school',
+    title: { es: 'Bachillerato de Ciencias', en: 'Science Baccalaureate' },
+    org: { es: 'Colegio Sagrado Corazón Fuencarral', en: 'Sagrado Corazón Fuencarral School' },
+    period: { es: 'Sept. 2021 – jun. 2023', en: 'Sep 2021 – Jun 2023' },
+  },
+  {
+    type: 'course',
+    title: { es: 'Videogame Camp', en: 'Videogame Camp' },
+    org: { es: 'ESNE (actualmente UDIT)', en: 'ESNE (now UDIT)' },
+    period: { es: 'Julio 2022', en: 'July 2022' },
+    badge: { es: 'Con diploma', en: 'Diploma awarded' },
+    description: {
+      es: 'Curso en el que aprendimos arte, diseño y programación de videojuegos.',
+      en: 'Course where we learned game art, design and programming.',
+    },
+    tools: [
+      { name: 'Aseprite', use: { es: 'pixel art', en: 'pixel art' } },
+      { name: 'Construct 3', use: { es: 'programación', en: 'programming' } },
+    ],
+  },
   {
     type: 'year',
     year: '2023',

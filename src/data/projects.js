@@ -233,6 +233,10 @@ export const projects = [
   // ───────────────────────────────────────────────────────────── 2. TrainTracker
   {
     slug: 'traintracker',
+    // API en plan gratuito de Render: se le hace una petición al abrir el portfolio para que esté despierta
+    // cuando alguien llegue a la demo (ver src/hooks/useApiWarmup.js). La URL viene de VITE_TRAINTRACKER_API_URL;
+    // si la variable no está definida, no se hace ninguna petición.
+    warmupUrl: import.meta.env.VITE_TRAINTRACKER_API_URL,
     kind: 'personal',
     status: 'completed',
     badges: ['deployed'],
@@ -300,7 +304,7 @@ export const projects = [
           {
             type: 'note',
             text: 'Más detalles técnicos en el README del repositorio.',
-            link: { label: 'Ver README', url: 'https://github.com/joseagim/train-tracker-frontend#readme' },
+            link: { label: 'Ver README', url: 'https://github.com/joseagim/train-tracker#readme' },
           },
         ],
         highlights: [
@@ -353,7 +357,7 @@ export const projects = [
           {
             type: 'note',
             text: 'More technical details in the repository README.',
-            link: { label: 'Read the README', url: 'https://github.com/joseagim/train-tracker-frontend#readme' },
+            link: { label: 'Read the README', url: 'https://github.com/joseagim/train-tracker#readme' },
           },
         ],
         highlights: [

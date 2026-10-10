@@ -36,7 +36,7 @@ export default function Navbar() {
           aria-label={t('a11y.goHome')}
           className="font-mono text-[15px] font-semibold tracking-tight text-ink dark:text-white"
         >
-          <span className="text-accent">~/</span>jose
+          <span className="text-accent">~/</span>joseagim
         </Link>
 
         {/* Escritorio */}

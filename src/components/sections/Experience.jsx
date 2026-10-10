@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Check, GraduationCap, Search } from 'lucide-react'
+import { BookOpen, Check, GraduationCap, Search, Gamepad2 } from 'lucide-react'
 import { useLanguage } from '../../i18n/LanguageContext'
 import { timeline } from '../../data/experience'
 import { getProject } from '../../data/projects'
@@ -24,9 +24,12 @@ function YearMarker({ item, pick }) {
   )
 }
 
+// Icono de cada tipo de entrada
+const ICONS = { education: GraduationCap, school: BookOpen, course: Gamepad2, internship: Search }
+
 function EntryCard({ item, side, pick, lang, t }) {
   const isInternship = item.type === 'internship'
-  const Icon = isInternship ? Search : GraduationCap
+  const Icon = ICONS[item.type] ?? GraduationCap
   const learned = item.learned ? pick(item.learned) : null
 
   return (
@@ -60,10 +63,27 @@ function EntryCard({ item, side, pick, lang, t }) {
         </div>
 
         <h3 className="mt-4 text-xl font-semibold tracking-tight text-ink dark:text-white">{pick(item.title)}</h3>
-        <p className="mt-0.5 text-sm font-medium text-navy-500 dark:text-navy-400">{pick(item.org)}</p>
+        {item.org && <p className="mt-0.5 text-sm font-medium text-navy-500 dark:text-navy-400">{pick(item.org)}</p>}
 
         {item.description && (
           <p className="mt-3 leading-relaxed text-navy-700 dark:text-navy-200">{pick(item.description)}</p>
+        )}
+
+        {item.tools?.length > 0 && (
+          <div className="mt-4">
+            <p className="eyebrow">{t('experience.tools')}</p>
+            <ul className="mt-2 flex flex-wrap gap-2">
+              {item.tools.map((tool) => (
+                <li
+                  key={tool.name}
+                  className="inline-flex items-center gap-1.5 rounded-md border border-navy-100 bg-navy-50 px-2.5 py-1 font-mono text-xs text-navy-700 dark:border-navy-800 dark:bg-navy-850 dark:text-navy-200"
+                >
+                  <span className="font-semibold text-ink dark:text-white">{tool.name}</span>
+                  <span className="text-navy-400">· {pick(tool.use)}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         )}
 
         {learned && (

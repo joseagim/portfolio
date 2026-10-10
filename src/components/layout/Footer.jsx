@@ -8,8 +8,8 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-navy-100 dark:border-navy-800">
-      <div className="container-page flex flex-col items-center justify-between gap-3 py-5 text-sm sm:flex-row">
-        <p className="text-center text-navy-500 sm:text-left dark:text-navy-400">
+      <div className="container-page flex flex-col items-center justify-center gap-2 py-5 text-sm sm:flex-row sm:gap-4">
+        <p className="text-center text-navy-500 dark:text-navy-400">
           © {year} {profile.name}
         </p>
         <ul className="flex items-center gap-1">

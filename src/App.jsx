@@ -3,6 +3,7 @@ import { useLanguage } from './i18n/LanguageContext'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import ScrollManager from './components/layout/ScrollManager'
+import useApiWarmup from './hooks/useApiWarmup'
 import Home from './pages/Home'
 import ProjectDetail from './pages/ProjectDetail'
 import NotFound from './pages/NotFound'
@@ -10,6 +11,7 @@ import NotFound from './pages/NotFound'
 export default function App() {
   const { t } = useLanguage()
   const { pathname } = useLocation()
+  useApiWarmup() // despierta la API de TrainTracker (plan gratuito) mientras se lee el portfolio
 
   return (
     <div className="flex min-h-screen flex-col">

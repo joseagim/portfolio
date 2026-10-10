@@ -63,6 +63,7 @@ const es = {
     title: 'Formación y trayectoria',
     subtitle: 'Mi recorrido académico y el siguiente paso que busco: unas prácticas en desarrollo de software.',
     learned: 'Lo que he aprendido',
+    tools: 'Herramientas',
     relatedProjects: 'Proyectos del grado',
   },
   projects: {

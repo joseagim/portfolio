@@ -4,7 +4,7 @@ import { CalendarClock, CodeXml, Container, GraduationCap, Languages, Layers, Ma
 export const profile = {
   name: 'José Antonio Gimeno San Martín',
   shortName: 'José Antonio Gimeno',
-  photo: '/profile.jpg',
+  photo: '/profile-square.jpg',
   email: 'gimenosmja@gmail.com',
   links: {
     github: 'https://www.github.com/joseagim',
